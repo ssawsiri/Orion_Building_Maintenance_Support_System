@@ -15,8 +15,8 @@ namespace Orion_Building_Maintenance_Support_System
         MySqlConnection con;
         MySqlCommand cmd;
         DataTable dt = new DataTable ();
-        MySqlDataAdapter da;
-        MySqlDataReader ds;
+       // MySqlDataAdapter da;
+        //MySqlDataReader ds;
 
         public Database_Connect()
         {
@@ -41,7 +41,7 @@ namespace Orion_Building_Maintenance_Support_System
             MySqlDataAdapter da = new MySqlDataAdapter(query, con);
             da.Fill(dt);
             //da.Fill(ds);
-
+            con.Close();
             return dt;
 
             

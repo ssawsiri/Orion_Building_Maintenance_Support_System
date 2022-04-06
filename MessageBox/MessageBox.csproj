@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD906D9D-0FD2-4C34-BD4E-1B3D2A969D7C}</ProjectGuid>
+    <ProjectGuid>{9EC5CA4F-081D-48AB-B65B-09774585F1BA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Orion_Building_Maintenance_Support_System</RootNamespace>
-    <AssemblyName>Orion_Building_Maintenance_Support_System</AssemblyName>
+    <RootNamespace>MessageBox</RootNamespace>
+    <AssemblyName>MessageBox</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,42 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminMainWindow.cs">
+    <Compile Include="MessageBoxErrorInternet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminMainWindow.Designer.cs">
-      <DependentUpon>AdminMainWindow.cs</DependentUpon>
+    <Compile Include="MessageBoxErrorInternet.Designer.cs">
+      <DependentUpon>MessageBoxErrorInternet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database_Connect.cs" />
-    <Compile Include="Form_Loading.cs">
+    <Compile Include="MessageBoxErrorLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Loading.Designer.cs">
-      <DependentUpon>Form_Loading.cs</DependentUpon>
+    <Compile Include="MessageBoxErrorLogin.Designer.cs">
+      <DependentUpon>MessageBoxErrorLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginCheck.cs" />
-    <Compile Include="loginWindow.cs">
+    <Compile Include="MessageBoxQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loginWindow.Designer.cs">
-      <DependentUpon>loginWindow.cs</DependentUpon>
+    <Compile Include="MessageBoxQuestion.Designer.cs">
+      <DependentUpon>MessageBoxQuestion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserPasswordChange.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserPasswordChange.Designer.cs">
-      <DependentUpon>UserPasswordChange.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="AdminMainWindow.resx">
-      <DependentUpon>AdminMainWindow.cs</DependentUpon>
+    <EmbeddedResource Include="MessageBoxErrorInternet.resx">
+      <DependentUpon>MessageBoxErrorInternet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Loading.resx">
-      <DependentUpon>Form_Loading.cs</DependentUpon>
+    <EmbeddedResource Include="MessageBoxErrorLogin.resx">
+      <DependentUpon>MessageBoxErrorLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loginWindow.resx">
-      <DependentUpon>loginWindow.cs</DependentUpon>
+    <EmbeddedResource Include="MessageBoxQuestion.resx">
+      <DependentUpon>MessageBoxQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,9 +85,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserPasswordChange.resx">
-      <DependentUpon>UserPasswordChange.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -111,77 +99,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1 e_Loq49BI4WmN7o9ItTADg.gif" />
+    <None Include="Resources\png-transparent-computer-icons-error-super-8-film-angle-triangle-computer-icons.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\Error Icon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo1.jpg" />
+    <None Include="Resources\ask.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user-icon-png-pnglogocom-133466.png" />
+    <None Include="Resources\ask%281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\UserLogo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\documents.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\inventory.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\task.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\agreement.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sales.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\profile.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\maximize.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\maximize%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Forms\Forms.csproj">
-      <Project>{ed3e3051-42fa-4356-af13-708ad2f13238}</Project>
-      <Name>Forms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MessageBox\MessageBox.csproj">
-      <Project>{9ec5ca4f-081d-48ab-b65b-09774585f1ba}</Project>
-      <Name>MessageBox</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\key-chain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\padlock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\padlock%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\padlock%282%29.png" />
+    <None Include="Resources\ask%282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
